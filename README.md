@@ -9,6 +9,8 @@ A complete C++ learning journey covering fundamental concepts and best practices
 - [Getting Started](#getting-started)
 - [File Structure](#file-structure)
 - [Concepts Covered](#concepts-covered)
+- [Advanced Theory](#advanced-theory)
+- [Learning Resources](#learning-resources)
 
 ## Overview
 
@@ -64,10 +66,18 @@ This repository contains C++ source files demonstrating core programming concept
 - `#include` directives
 - Header guard and multiple inclusion prevention
 
-### 8. **Additional Details** (`details.cpp`)
-- Advanced concepts and edge cases
-- Best practices in C++
-- Common pitfalls and how to avoid them
+### 8. **Constants, Manipulators & Operator Precedence** (`constants_manipulators_operator_precedence.cpp`)
+- Constants: fixed values that cannot be altered during execution
+- Manipulators: `endl`, `setw`, `setprecision` for output formatting
+- Operator precedence: order of evaluation in expressions
+
+### 9. **Control Structures** (`control_structures.cpp`)
+- Sequence structure: sequential execution of statements
+- Selection structure: if-else, if-else-if-else, switch statements
+- Iteration/Loop structure: for, while, do-while loops
+
+### 10. **Personal Details** (`personal_details.cpp`)
+- Practical application combining variables, data types, and output operations
 
 ## Getting Started
 
@@ -98,29 +108,35 @@ g++ filename.cpp -o filename
 
 ```
 C-Course/
-├── hello_world.cpp              # Program entry point basics
-├── Variables_comments.cpp       # Variables and comments
-├── tokens.cpp                   # Tokens in C++
-├── basic_i_o.cpp               # Input/Output operations
-├── Variable_scope_Data_types.cpp # Scope and data types
-├── referencevariable.cpp        # Reference variables
-├── header_files.cpp             # Header files
-├── details.cpp                  # Additional concepts
-├── LICENSE                      # License information
-└── README.md                    # This file
+├── hello_world.cpp                    # Program entry point basics
+├── Variables_comments.cpp             # Variables and comments
+├── tokens.cpp                         # Tokens in C++
+├── basic_i_o.cpp                      # Input/Output operations
+├── Variable_scope_Data_types.cpp      # Scope and data types
+├── referencevariable.cpp              # Reference variables
+├── header_files.cpp                   # Header files
+├── constants_manipulators_operator_precedence.cpp  # Advanced operators
+├── control_structures.cpp             # Control flow statements
+├── personal_details.cpp               # Practical application example
+├── THEORY_AND_ADVANCED_CONCEPTS.md    # Comprehensive theory guide
+├── LICENSE                            # License information
+└── README.md                          # This file
 ```
 
 ## Concepts Covered
 
 - ✅ Program structure and compilation
-- ✅ Variables, constants, and data types
-- ✅ Comments and documentation
-- ✅ Input and output operations
+- ✅ Variables and comments
 - ✅ Tokens and syntax
-- ✅ Variable scope and lifetime
-- ✅ References and pointers
-- ✅ Header files and modularity
-- ✅ Best practices and common patterns
+- ✅ Input and output operations
+- ✅ Variable scope (local and global) and data types
+- ✅ Reference variables
+- ✅ Type casting
+- ✅ Header files (system and user-defined)
+- ✅ Operators: Arithmetic, Comparison, Logical, Assignment
+- ✅ Constants and manipulators
+- ✅ Control structures: Selection (if-else, switch)
+- ✅ Scope resolution operator (::)
 
 ## Learning Path
 
@@ -128,10 +144,12 @@ C-Course/
 2. Move to `Variables_comments.cpp` to learn about variables
 3. Study `tokens.cpp` for language fundamentals
 4. Practice `basic_i_o.cpp` for user interaction
-5. Explore `Variable_scope_Data_types.cpp` for type system
-6. Understand `referencevariable.cpp` for advanced variable concepts
-7. Learn `header_files.cpp` for code organization
-8. Review `details.cpp` for edge cases and best practices
+5. Explore `Variable_scope_Data_types.cpp` for type system and scope
+6. Understand `referencevariable.cpp` for reference variables and type casting
+7. Learn `header_files.cpp` for operators (arithmetic, comparison, logical)
+8. Study `constants_manipulators_operator_precedence.cpp` for constants and output formatting
+9. Master `control_structures.cpp` for decision-making and loops
+10. Apply all concepts in `personal_details.cpp`
 
 ## Tips for Learning
 
@@ -140,6 +158,26 @@ C-Course/
 - **Take notes** on key concepts as you progress
 - **Practice writing** your own variations
 - **Debug your code** to understand program flow
+- **Review** [THEORY_AND_ADVANCED_CONCEPTS.md](THEORY_AND_ADVANCED_CONCEPTS.md) for in-depth theoretical knowledge
+- **Experiment** with different data types and operators
+- **Build projects** combining multiple concepts
+
+## Advanced Theory
+
+For deeper understanding of C++ concepts extracted from the comments in code, refer to [THEORY_AND_ADVANCED_CONCEPTS.md](THEORY_AND_ADVANCED_CONCEPTS.md).
+
+This document contains theoretical knowledge organized by topic, including:
+- Detailed explanations of tokens, data types, and operators
+- Variable scope and reference variables
+- Type casting and control structures
+- Input/output operations and manipulators
+- Header files and the scope resolution operator
+
+## Learning Resources
+
+### Official Documentation
+- [C++ Reference](https://en.cppreference.com/)
+- [Operator Precedence Reference](https://en.cppreference.com/w/cpp/language/operator_precedence)
 
 ## License
 
