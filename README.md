@@ -19,6 +19,7 @@ This repository contains C++ source files demonstrating core programming concept
 ## Course Topics
 
 ### 1. **Hello World** (`hello_world.cpp`)
+
 - Introduction to C++ program structure
 - Preprocessor directives (`#include`)
 - `main()` function
@@ -26,6 +27,7 @@ This repository contains C++ source files demonstrating core programming concept
 - Header files and namespaces
 
 ### 2. **Variables & Comments** (`Variables_comments.cpp`)
+
 - Declaration and initialization of variables
 - Different data types (int, float, char)
 - Single-line comments (`//`)
@@ -33,6 +35,7 @@ This repository contains C++ source files demonstrating core programming concept
 - Variable naming conventions
 
 ### 3. **Tokens** (`tokens.cpp`)
+
 - Understanding C++ tokens:
   - Keywords
   - Identifiers
@@ -41,6 +44,7 @@ This repository contains C++ source files demonstrating core programming concept
 - Token classifications and usage
 
 ### 4. **Basic I/O** (`basic_i_o.cpp`)
+
 - Input operations using `cin`
 - Output operations using `cout`
 - Insertion operator (`<<`)
@@ -48,6 +52,7 @@ This repository contains C++ source files demonstrating core programming concept
 - Interactive user input and output
 
 ### 5. **Variable Scope & Data Types** (`Variable_scope_Data_types.cpp`)
+
 - Understanding variable scope
 - Local and global variables
 - Built-in data types (int, float, double, char, bool)
@@ -55,33 +60,47 @@ This repository contains C++ source files demonstrating core programming concept
 - Variable lifetime
 
 ### 6. **Reference Variables** (`referencevariable.cpp`)
+
 - Reference variable declaration and initialization
 - Aliases to existing variables
 - Differences between pointers and references
 - Usage and practical applications
 
 ### 7. **Header Files** (`header_files.cpp`)
+
 - Custom header file creation
 - Standard library headers
 - `#include` directives
 - Header guard and multiple inclusion prevention
 
 ### 8. **Constants, Manipulators & Operator Precedence** (`constants_manipulators_operator_precedence.cpp`)
+
 - Constants: fixed values that cannot be altered during execution
 - Manipulators: `endl`, `setw`, `setprecision` for output formatting
 - Operator precedence: order of evaluation in expressions
 
 ### 9. **Control Structures** (`control_structures.cpp`)
+
 - Sequence structure: sequential execution of statements
 - Selection structure: if-else, if-else-if-else, switch statements
-- Iteration/Loop structure: for, while, do-while loops
+- Decision-making patterns and best practices
 
-### 10. **Personal Details** (`personal_details.cpp`)
+### 10. **Loops - For, While, Do-While** (`for_while_dowhile.cpp`)
+
+- For loop: syntax, initialization, condition, increment/decrement
+- While loop: syntax and conditional iteration
+- Do-while loop: syntax and guaranteed execution
+- Infinite loops and loop control
+- Practical loop applications
+
+### 11. **Personal Details** (`personal_details.cpp`)
+
 - Practical application combining variables, data types, and output operations
 
 ## Getting Started
 
 ### Prerequisites
+
 - A C++ compiler (g++, clang, MSVC, etc.)
 - A text editor or IDE (VS Code recommended)
 - Basic familiarity with command-line interface
@@ -89,24 +108,27 @@ This repository contains C++ source files demonstrating core programming concept
 ### Compilation & Execution
 
 **On Windows (with g++ installed):**
+
 ```cmd
 g++ filename.cpp -o filename
 .\filename.exe
 ```
 
 **On Linux/Mac:**
+
 ```bash
 g++ filename.cpp -o filename
 ./filename
 ```
 
 **Using VS Code:**
+
 - Install C/C++ extension by Microsoft
 - Use the built-in debugger and terminal for compilation
 
 ## File Structure
 
-```
+```text
 C-Course/
 ├── hello_world.cpp                    # Program entry point basics
 ├── Variables_comments.cpp             # Variables and comments
@@ -117,6 +139,7 @@ C-Course/
 ├── header_files.cpp                   # Header files
 ├── constants_manipulators_operator_precedence.cpp  # Advanced operators
 ├── control_structures.cpp             # Control flow statements
+├── for_while_dowhile.cpp              # For, while, and do-while loops
 ├── personal_details.cpp               # Practical application example
 ├── THEORY_AND_ADVANCED_CONCEPTS.md    # Comprehensive theory guide
 ├── LICENSE                            # License information
@@ -134,6 +157,8 @@ C-Course/
 - ✅ Type casting
 - ✅ Header files (system and user-defined)
 - ✅ Operators: Arithmetic, Comparison, Logical, Assignment
+- ✅ Control structures: sequence and selection
+- ✅ Loop structures: for, while, do-while
 - ✅ Constants and manipulators
 - ✅ Control structures: Selection (if-else, switch)
 - ✅ Scope resolution operator (::)
@@ -167,6 +192,7 @@ C-Course/
 For deeper understanding of C++ concepts extracted from the comments in code, refer to [THEORY_AND_ADVANCED_CONCEPTS.md](THEORY_AND_ADVANCED_CONCEPTS.md).
 
 This document contains theoretical knowledge organized by topic, including:
+
 - Detailed explanations of tokens, data types, and operators
 - Variable scope and reference variables
 - Type casting and control structures
@@ -176,6 +202,7 @@ This document contains theoretical knowledge organized by topic, including:
 ## Learning Resources
 
 ### Official Documentation
+
 - [C++ Reference](https://en.cppreference.com/)
 - [Operator Precedence Reference](https://en.cppreference.com/w/cpp/language/operator_precedence)
 

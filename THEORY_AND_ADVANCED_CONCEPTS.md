@@ -18,6 +18,7 @@ This document contains theoretical knowledge extracted directly from the comment
 12. [Reference Variables](#reference-variables)
 13. [Type Casting](#type-casting)
 14. [Control Structures](#control-structures)
+15. [Loops](#loops)
 
 ---
 
@@ -26,25 +27,31 @@ This document contains theoretical knowledge extracted directly from the comment
 ### Basic Components
 
 **Preprocessor Directive:**
+
 ```cpp
 #include <iostream>  // This is a preprocessor directive
 ```
+
 - `#include` tells the compiler to include a header file
 - Allows us to use input and output streams
 
 **Using Namespace:**
+
 ```cpp
 using namespace std;
 ```
+
 - Allows us to use standard library functions without the `std::` prefix
 - Avoids prefixing `std::` before standard functions
 
 **Main Function:**
+
 ```cpp
 int main() {
     return 0;
 }
 ```
+
 - Execution starts here
 - Program ends successfully when `return 0;` is executed
 
@@ -53,11 +60,13 @@ int main() {
 ## Comments
 
 ### Single-line Comments
+
 ```cpp
 // This is a single line comment
 ```
 
 ### Multi-line Comments
+
 ```cpp
 /* This is a multi-line comment
    that spans multiple lines */
@@ -81,6 +90,7 @@ Tokens are the basic building blocks of a C++ program. Every valid statement in 
    - String literals: `"kaushal"`, `"Hello, World!"`
 
 **Example:**
+
 ```cpp
 int number = 10;  // keyword + identifier + operator + literal
 float pi = 3.14;  // keyword + identifier + operator + literal
@@ -99,6 +109,7 @@ Data_type Variable_name = value;
 ```
 
 **Examples:**
+
 ```cpp
 int a = 10;
 float b = 20.01;
@@ -112,17 +123,20 @@ int a = 4, b = 8;
 ### Variable Classification by Scope
 
 **1. Local Variables:**
+
 - Declared inside a function
 - Only accessible within that function
 - Memory allocated when entering the function scope
 - Memory freed when leaving the function scope
 
 **2. Global Variables:**
+
 - Declared outside all functions
 - Accessible throughout the program
 - Memory exists for the program's lifetime
 
 **Example:**
+
 ```cpp
 int glo = 6;  // Global variable
 
@@ -140,11 +154,13 @@ int main(){
 ### Built-in Data Types in C++
 
 **Integer Type:**
+
 ```cpp
 int a = 10;
 ```
 
 **Floating-Point Type:**
+
 ```cpp
 float d = 34.4F;      // Float literal with 'F' suffix
 double e = 34.4;      // Default floating-point
@@ -152,16 +168,19 @@ long double e = 34.4L; // Extended precision with 'L' suffix
 ```
 
 **Character Type:**
+
 ```cpp
 char c = 'A';
 ```
 
 **Boolean Type:**
+
 ```cpp
 bool is_true = false;
 ```
 
 **String Type:**
+
 ```cpp
 string name = "kaushal";
 ```
@@ -227,11 +246,12 @@ int x = 10;  // Assign 10 to x
 
 ## Constants
 
-### Definition
+### Concept Definition
 
 Constants in C++ are fixed values that cannot be altered by the program during its execution. They are also called literals.
 
 **Declaration Syntax:**
+
 ```cpp
 const int a = 3;
 a = 45;  // ERROR: a is a constant and cannot be changed
@@ -261,6 +281,7 @@ setprecision(2)  // Set decimal precision
 ```
 
 **Example:**
+
 ```cpp
 int a = 3, b = 78, c = 1233;
 
@@ -273,7 +294,7 @@ cout << "The value of c is: " << setw(4) << c << endl;
 
 ## Input/Output Operations
 
-### Output with `cout`
+### Output with cout
 
 ```cpp
 #include <iostream>
@@ -282,19 +303,20 @@ using namespace std;
 cout << "Enter the value of num1:\n";  // Using insertion operator <<
 ```
 
-### Input with `cin`
+### Input with cin
 
 ```cpp
 int num1;
 cin >> num1;  // Using extraction operator >>
 ```
 
-### Operators
+### Operator Usage
 
 - **Insertion Operator `<<`:** Used for output operations with `cout`
 - **Extraction Operator `>>`:** Used for input operations with `cin`
 
 **Example:**
+
 ```cpp
 int num1, num2;
 
@@ -342,6 +364,7 @@ There are two types of header files in C++:
 The scope resolution operator `::` is used to access global variables or functions when they are shadowed by local variables of the same name.
 
 **Example:**
+
 ```cpp
 int c = 45;  // Global variable
 
@@ -357,11 +380,12 @@ int main(){
 
 ## Reference Variables
 
-### Definition
+### Reference Variable Definition
 
 A reference variable is an alias for an existing variable. Once a reference is initialized, it cannot be changed to refer to another variable.
 
 **Syntax:**
+
 ```cpp
 float x = 455;
 float & y = x;  // y is a reference variable for x
@@ -374,6 +398,7 @@ float & y = x;  // y is a reference variable for x
 - Reference and original variable share the same memory location
 
 **Example:**
+
 ```cpp
 float x = 455;
 float & y = x;  // y is a reference variable (alias) for x
@@ -396,18 +421,20 @@ Each level is an alias/reference to the previous one, all pointing to the same e
 
 ## Type Casting
 
-### Definition
+### Casting Process
 
 Type casting is the process of converting a variable from one data type to another.
 
 ### Type Casting Syntax
 
 **C-style casting:**
+
 ```cpp
 (data_type) variable
 ```
 
 **C++ style casting:**
+
 ```cpp
 data_type(variable)
 ```
@@ -454,7 +481,8 @@ Control structures are essential for controlling the flow of a program. They all
 The sequence structure is the simplest control structure. It consists of a series of statements executed in the order they appear.
 
 **Flow:**
-```
+
+```text
 Entry --> Action1 --> Action2 --> Action3 --> Exit
 ```
 
@@ -463,13 +491,15 @@ Entry --> Action1 --> Action2 --> Action3 --> Exit
 Allows the program to make decisions based on certain conditions.
 
 **Flow:**
-```
+
+```text
 Entry --> Condition? --> True --> Action1 --> False --> Action2 --> Exit
 ```
 
 **Types of Selection Statements:**
 
 **a) if Statement:**
+
 ```cpp
 if(condition) {
     // Code executes if condition is true
@@ -477,6 +507,7 @@ if(condition) {
 ```
 
 **b) if-else Statement:**
+
 ```cpp
 if(i < 3) {
     cout << "i is less than 3" << endl;
@@ -486,7 +517,8 @@ else {
 }
 ```
 
-**c) If else-if else Ladder:**
+**c) If-else-if-else Ladder:**
+
 ```cpp
 if(age < 18 && age > 0) {
     cout << "You cannot come to my party" << endl;
@@ -503,6 +535,7 @@ else {
 ```
 
 **d) switch Statement:**
+
 ```cpp
 switch(age) {
     case 18:
@@ -524,7 +557,8 @@ switch(age) {
 Allows the program to repeat a block of code multiple times based on a condition.
 
 **Flow:**
-```
+
+```text
 Entry --> Condition? --> True --> Action1 --> Condition? --> True --> Action1 --> ... --> False --> Exit
 ```
 
@@ -532,554 +566,202 @@ Entry --> Condition? --> True --> Action1 --> Condition? --> True --> Action1 --
 
 ---
 
+## Loops
+
+Loops in C++ are control structures that allow a block of code to be executed repeatedly based on a condition. There are three types of loops in C++.
+
+### Loop Types Overview
+
+1. **For Loop** - Used when the number of iterations is known
+2. **While Loop** - Used when iterations depend on a condition
+3. **Do-While Loop** - Similar to while loop but executes at least once
+
+---
+
+### For Loop
+
+#### For Loop Basics
+
+A for loop is used to execute a block of code a specific number of times. It initializes a variable, checks a condition, and increments/decrements the variable after each iteration.
+
+#### For Loop Syntax
+
+```cpp
+for(initialization; condition; increment/decrement) {
+    // code to be executed
+}
+```
+
+#### For Loop Components
+
+- **Initialization:** Declares and initializes loop variable (executed once before the loop starts)
+- **Condition:** Checked before each iteration; if true, loop body executes; if false, loop exits
+- **Increment/Decrement:** Executed after each iteration to modify the loop variable
+
+#### For Loop Example
+
+```cpp
+for(int i = 0; i <= 40; i++) {
+    cout << i << endl;
+}
+```
+
+This code prints numbers from 0 to 40.
+
+#### Infinite For Loop
+
+An infinite for loop occurs when the condition is always true:
+
+```cpp
+for (int i = 1; 34 <= 40; i++) {
+    // This loop runs infinitely because 34 <= 40 is always true
+    cout << i << endl;
+}
+```
+
+---
+
+### While Loop
+
+#### While Loop Basics
+
+A while loop executes a block of code as long as a specified condition is true. The condition is checked before each iteration.
+
+#### While Loop Syntax
+
+```cpp
+while(condition) {
+    // C++ statements
+}
+```
+
+#### While Loop Components
+
+- **Condition:** Evaluated before each iteration; if true, loop body executes; if false, loop exits
+- **Loop Body:** Code that executes when condition is true
+- **Increment/Update:** Must be included inside the loop body to modify variables
+
+#### While Loop Example
+
+```cpp
+int i = 1;
+while(i <= 40) {
+    cout << i << endl;
+    i++;
+}
+```
+
+This code prints numbers from 1 to 40.
+
+#### Infinite While Loop
+
+An infinite while loop can be created using a condition that is always true:
+
+```cpp
+int i = 1;
+while(true) {
+    cout << i << endl;
+    i++;
+}
+```
+
+---
+
+### Do-While Loop
+
+#### Do-While Loop Basics
+
+A do-while loop is similar to a while loop, but the key difference is that the code block is executed at least once before checking the condition. The condition is checked after each iteration.
+
+#### Do-While Loop Syntax
+
+```cpp
+do {
+    // C++ statements
+} while(condition);
+```
+
+#### Do-While Loop Components
+
+- **Loop Body:** Code that executes at least once
+- **Condition:** Evaluated after each iteration; if true, loop repeats; if false, loop exits
+- **Semicolon:** Important - required at the end of the while statement
+
+#### Do-While Loop Example
+
+```cpp
+int i = 1;
+do {
+    cout << i << endl;
+    i++;
+} while(i <= 40);
+```
+
+This code prints numbers from 1 to 40, guaranteed to print at least once.
+
+#### Key Difference from While Loop
+
+Even if the condition is false initially, a do-while loop will execute the body at least once:
+
+```cpp
+int i = 50;
+while(i <= 40) {
+    cout << i << endl;  // This never executes
+    i++;
+}
+
+int j = 50;
+do {
+    cout << j << endl;  // This executes once
+    j++;
+} while(j <= 40);
+```
+
+#### Practical Application: Multiplication Table
+
+```cpp
+int i = 1, n = 6;
+cout << "Multiplication table of 6" << endl;
+do {
+    cout << n << " * " << i << " = " << (n*i) << endl;
+    i++;
+} while(i <= 10);
+```
+
+This produces:
+
+```text
+Multiplication table of 6
+6 * 1 = 6
+6 * 2 = 12
+6 * 3 = 18
+... up to 6 * 10 = 60
+```
+
+---
+
 ## Summary of Concepts Covered
 
 From the course code, the following concepts have been actively learned and practiced:
 
-✅ Program structure and main function  
-✅ Comments (single-line and multi-line)  
-✅ Tokens and their classification  
-✅ Variables and declaration  
-✅ Local and global scope  
-✅ Built-in data types  
-✅ Arithmetic, comparison, and logical operators  
-✅ Input/Output operations with cin and cout  
-✅ Header files (system and user-defined)  
-✅ Reference variables  
-✅ Type casting  
-✅ Constants  
-✅ Manipulators for formatting output  
-✅ Control structures (sequence, selection)  
-✅ Scope resolution operator  
-
----
-
-**Last Updated:** 2026-07-13
-
----
-
-## Memory Management
-
-### Stack vs Heap
-
-**Stack Memory:**
-- Automatically allocated and deallocated
-- Faster access
-- Limited size (typically smaller)
-- LIFO (Last In First Out) structure
-- Scope-dependent lifecycle
-
-**Heap Memory:**
-- Manual allocation and deallocation (in C)
-- Slower access
-- Larger available space
-- Persistent until explicitly freed
-- Used with `new` and `delete` keywords
-
-```cpp
-// Stack allocation (automatic)
-int x = 10;
-
-// Heap allocation (manual)
-int* ptr = new int(10);
-delete ptr;  // Must deallocate
-```
-
-### Memory Leaks
-
-A memory leak occurs when dynamically allocated memory is not freed:
-- Unused memory accumulates
-- Application performance degrades
-- Eventually system runs out of memory
-
-Prevention:
-- Always pair `new` with `delete`
-- Use smart pointers (modern C++)
-- Consider RAII (Resource Acquisition Is Initialization)
-
----
-
-## Pointers & References Detailed
-
-### Pointers
-
-**Definition:** A variable that stores a memory address
-
-```cpp
-int x = 5;
-int* ptr = &x;    // Address-of operator &
-int value = *ptr; // Dereference operator *
-```
-
-**Key Concepts:**
-- `&` (address-of): Gets the memory address
-- `*` (dereference): Accesses value at address
-- `nullptr`: Null pointer (preferred over NULL)
-- Dangling pointers: Point to freed memory (dangerous!)
-
-### References
-
-**Definition:** An alias to an existing variable
-
-```cpp
-int x = 5;
-int& ref = x;  // Reference to x
-ref = 10;      // Changes x to 10
-```
-
-**Differences from Pointers:**
-| Feature | Pointer | Reference |
-|---------|---------|-----------|
-| Reassignment | Yes | No |
-| Null value | Yes | No |
-| Syntax | `*ptr` | `ref` |
-| Memory address | Can change | Fixed |
-| Indirection | Multiple levels | Single level |
-
----
-
-## Object-Oriented Programming
-
-### Classes & Objects
-
-**Basic Structure:**
-```cpp
-class Car {
-private:
-    string color;
-    int speed;
-
-public:
-    // Constructor
-    Car(string c, int s) : color(c), speed(s) {}
-    
-    // Getter
-    string getColor() const { return color; }
-    
-    // Setter
-    void setSpeed(int s) { speed = s; }
-};
-```
-
-### Encapsulation
-
-- **Private:** Only accessible within the class
-- **Public:** Accessible from outside
-- **Protected:** Accessible in derived classes
-
-Benefits:
-- Data hiding
-- Controlled access
-- Easier maintenance
-
-### Inheritance
-
-```cpp
-class Vehicle { /* base class */ };
-class Car : public Vehicle { /* derived class */ };
-```
-
-Types:
-- **Public inheritance:** IS-A relationship
-- **Private inheritance:** Implementation detail
-- **Protected inheritance:** Controlled interface
-
-### Polymorphism
-
-**Virtual Functions:**
-```cpp
-class Shape {
-public:
-    virtual void draw() { cout << "Drawing shape"; }
-};
-
-class Circle : public Shape {
-public:
-    void draw() override { cout << "Drawing circle"; }
-};
-```
-
-Benefits:
-- Runtime type flexibility
-- Code reusability
-- Extensible design
-
----
-
-## Functions & Scope
-
-### Function Declarations vs Definitions
-
-**Declaration:**
-```cpp
-int add(int a, int b);  // Tells compiler function exists
-```
-
-**Definition:**
-```cpp
-int add(int a, int b) {
-    return a + b;
-}
-```
-
-### Variable Scope
-
-**Global Scope:**
-- Accessible throughout the program
-- Memory exists for program lifetime
-- Can lead to naming conflicts
-
-**Local Scope:**
-- Accessible only within the block
-- Memory allocated when entering scope
-- Memory freed when leaving scope
-
-**Static Variables:**
-```cpp
-void counter() {
-    static int count = 0;
-    count++;
-}
-```
-- Retains value between function calls
-- Initialized only once
-
-### Function Parameters
-
-**Pass by Value:**
-```cpp
-void modify(int x) { x = 10; }  // Copy passed
-```
-
-**Pass by Reference:**
-```cpp
-void modify(int& x) { x = 10; }  // Original modified
-```
-
-**Pass by Pointer:**
-```cpp
-void modify(int* x) { *x = 10; }  // Original modified
-```
-
----
-
-## Operators & Precedence
-
-### Operator Categories
-
-**Arithmetic:** `+`, `-`, `*`, `/`, `%`
-
-**Relational:** `==`, `!=`, `<`, `>`, `<=`, `>=`
-
-**Logical:** `&&` (AND), `||` (OR), `!` (NOT)
-
-**Bitwise:** `&`, `|`, `^`, `~`, `<<`, `>>`
-
-**Assignment:** `=`, `+=`, `-=`, `*=`, `/=`, etc.
-
-### Operator Precedence (High to Low)
-
-1. Postfix: `++`, `--`, `()`, `[]`, `.`
-2. Unary: `++`, `--`, `!`, `~`, `+`, `-`, `*`, `&`, `sizeof`
-3. Multiplicative: `*`, `/`, `%`
-4. Additive: `+`, `-`
-5. Shift: `<<`, `>>`
-6. Relational: `<`, `>`, `<=`, `>=`
-7. Equality: `==`, `!=`
-8. Bitwise AND: `&`
-9. Bitwise XOR: `^`
-10. Bitwise OR: `|`
-11. Logical AND: `&&`
-12. Logical OR: `||`
-13. Conditional: `?:`
-14. Assignment: `=`, `+=`, etc.
-
-**Pro Tip:** Use parentheses `()` to explicitly control precedence and improve code readability.
-
----
-
-## Type System
-
-### Primitive Types
-
-**Integer Types:**
-- `char`: 1 byte (-128 to 127)
-- `short`: 2 bytes
-- `int`: Usually 4 bytes
-- `long`: At least 4 bytes
-- `long long`: At least 8 bytes
-
-**Floating-Point Types:**
-- `float`: 4 bytes, ~6-7 decimal digits
-- `double`: 8 bytes, ~15-16 decimal digits
-- `long double`: Extended precision
-
-**Boolean Type:**
-- `bool`: true/false, typically 1 byte
-
-### Type Conversion
-
-**Implicit (Automatic):**
-```cpp
-int x = 10;
-double y = x;  // int automatically converted to double
-```
-
-**Explicit (Casting):**
-```cpp
-double d = 3.14;
-int x = (int)d;      // C-style cast
-int y = static_cast<int>(d);  // C++ style (preferred)
-```
-
-### Type Modifiers
-
-- `unsigned`: No negative values
-- `signed`: Allows negative values (default)
-- `const`: Immutable value
-- `volatile`: May change unexpectedly
-
----
-
-## Preprocessor Directives
-
-### #include
-
-**System Headers:**
-```cpp
-#include <iostream>  // Angle brackets for system headers
-```
-
-**User Headers:**
-```cpp
-#include "myheader.h"  // Quotes for local files
-```
-
-### #define
-
-```cpp
-#define PI 3.14159
-#define MAX(a, b) ((a) > (b) ? (a) : (b))
-```
-
-**Modern Alternative:** Use `const` and inline functions
-
-### Header Guards
-
-```cpp
-#ifndef MYHEADER_H
-#define MYHEADER_H
-
-// Header content
-
-#endif
-```
-
-Prevents multiple inclusions and compilation errors.
-
-### Conditional Compilation
-
-```cpp
-#ifdef DEBUG
-    cout << "Debug mode";
-#endif
-```
-
-Useful for platform-specific or debug code.
-
----
-
-## Standard Library Essentials
-
-### iostream
-
-**Input/Output Operations:**
-```cpp
-cin >> x;           // Input
-cout << x;          // Output
-cerr << "Error";    // Error output
-clog << "Log";      // Log output
-```
-
-**Manipulators:**
-```cpp
-cout << fixed << setprecision(2) << 3.14159;
-cout << hex << 255;        // Hexadecimal
-cout << setw(10) << "Text"; // Field width
-```
-
-### string
-
-**Basic Operations:**
-```cpp
-string s = "Hello";
-s += " World";
-s.length();
-s.substr(0, 5);
-s.find("World");
-```
-
-### vector
-
-**Dynamic Array:**
-```cpp
-vector<int> v;
-v.push_back(10);
-v.pop_back();
-v.size();
-v[0];  // Access
-```
-
-### algorithm
-
-**Common Functions:**
-```cpp
-sort(v.begin(), v.end());
-find(v.begin(), v.end(), value);
-reverse(v.begin(), v.end());
-```
-
----
-
-## Common Pitfalls & Best Practices
-
-### Pitfalls
-
-1. **Uninitialized Variables**
-   ```cpp
-   int x;      // Contains garbage value!
-   int y = 0;  // Safe
-   ```
-
-2. **Array Out of Bounds**
-   ```cpp
-   int arr[5];
-   arr[5] = 10;  // Undefined behavior!
-   ```
-
-3. **Dangling Pointers**
-   ```cpp
-   int* ptr = new int(10);
-   delete ptr;
-   cout << *ptr;  // Undefined behavior!
-   ```
-
-4. **Function Declaration After Usage**
-   ```cpp
-   // Must declare function before use or use forward declaration
-   int add(int a, int b);
-   ```
-
-### Best Practices
-
-1. **Use meaningful variable names**
-   ```cpp
-   int age;        // Good
-   int a;          // Poor
-   ```
-
-2. **Initialize variables at declaration**
-   ```cpp
-   int x = 0;
-   string name = "";
-   ```
-
-3. **Use const for unchanging values**
-   ```cpp
-   const int MAX_SIZE = 100;
-   ```
-
-4. **Add comments for complex logic**
-   ```cpp
-   // Bubble sort implementation
-   for (int i = 0; i < n - 1; i++) {
-       // ...
-   }
-   ```
-
-5. **Use proper indentation and formatting**
-   - Improves readability
-   - Easier to maintain
-
-6. **Validate user input**
-   ```cpp
-   if (cin >> x) {
-       // Process valid input
-   } else {
-       // Handle error
-   }
-   ```
-
-7. **Use forward declarations to manage dependencies**
-   ```cpp
-   class MyClass;  // Forward declaration
-   ```
-
----
-
-## Performance Considerations
-
-### Optimization Tips
-
-1. **Pass large objects by reference**
-   ```cpp
-   void process(const MyClass& obj);  // Better than pass by value
-   ```
-
-2. **Use `++i` instead of `i++` in loops**
-   ```cpp
-   for (int i = 0; i < 100; ++i);  // No temporary object created
-   ```
-
-3. **Avoid unnecessary copies**
-   ```cpp
-   vector<int> v = {1, 2, 3};
-   auto& ref = v;  // Reference, no copy
-   ```
-
-4. **Use appropriate data structures**
-   - `vector` for indexed access
-   - `set` for unique, sorted elements
-   - `map` for key-value pairs
-   - `unordered_map` for fast lookups
-
-5. **Minimize system calls**
-   - Batch I/O operations
-   - Use buffering effectively
-
-### Time Complexity Awareness
-
-- **O(1):** Constant time (best)
-- **O(log n):** Logarithmic
-- **O(n):** Linear
-- **O(n log n):** Linearithmic
-- **O(n²):** Quadratic (avoid for large inputs)
-- **O(2ⁿ):** Exponential (extremely slow)
-
-Choose algorithms appropriate for your data size and requirements.
-
----
-
-## Quick Reference
-
-| Concept | Syntax | Example |
-|---------|--------|---------|
-| Pointer | `type*` | `int* ptr = &x;` |
-| Reference | `type&` | `int& ref = x;` |
-| const | `const type` | `const int x = 5;` |
-| Array | `type[size]` | `int arr[10];` |
-| Function | `type func()` | `int add(int a, int b)` |
-| Loop | `for/while/do-while` | `for (int i = 0; i < n; ++i)` |
-
----
-
-## Further Learning
-
-- Read official C++ documentation
-- Study design patterns
-- Practice with coding challenges
-- Review established coding standards (Google C++ Style Guide)
-- Explore modern C++ features (C++11, C++17, C++20)
+- ✅ Program structure and main function
+- ✅ Comments (single-line and multi-line)
+- ✅ Tokens and their classification
+- ✅ Variables and declaration
+- ✅ Local and global scope
+- ✅ Built-in data types
+- ✅ Arithmetic, comparison, and logical operators
+- ✅ Input/Output operations with cin and cout
+- ✅ Header files (system and user-defined)
+- ✅ Reference variables
+- ✅ Type casting
+- ✅ Constants
+- ✅ Manipulators for formatting output
+- ✅ Control structures (sequence, selection)
+- ✅ Scope resolution operator
+- ✅ Loop structures (for, while, do-while)
+- ✅ Infinite loops and loop control
+- ✅ Practical loop applications
 
 ---
 
